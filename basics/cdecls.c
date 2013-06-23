@@ -1,5 +1,5 @@
 /*    
-    Basic character operations
+    Basic C Declaration, constants
 
     Copyright (C) 2013  H. F. Noelscher
 
@@ -17,45 +17,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "cdecls.c"
-
-bool isUpper(char *c)
-{
-  return *c < 91;
-}
-
-bool isLower(char *c)
-{
-  return *c > 91;
-}
-
-bool isNumeric(char *c)
-{
-  return ( (*c > 47) && (*c < 58) );
-}
-
-bool isCharacter(char *c)
-{
-  return ( ((*c > 64) && (*c < 91)) ||
-	   ((*c > 96) && (*c < 123)) ); // tbc
-}
-
-bool isAlpha(char *c)
-{
-  return ( isNumeric(c) || isCharacter(c) );
-}
-
-void toUpper(char *c)
-{
-  *c &= ~0x20;
-}
-
-void toLower(char *c)
-{
-  *c |= 0x20;
-}
-
-void swapCase(char *c)
-{
-  *c ^= 0x20;
-}
+typedef int bool;
+#define TRUE   (1)
+#define FALSE  (0)
