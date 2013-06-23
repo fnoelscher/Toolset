@@ -15,5 +15,34 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 */
+
+bool isUpper(char *c)
+{
+  return *c < 91;
+}
+
+bool isLower(char *c)
+{
+  return *c > 91;
+}
+
+bool isAlpha(char *c)
+{
+
+}
+
+void toUpper(char *c)
+{
+
+}
+
+void toLower(char *c)
+{
+
+}
+
+void swapCase(char *c)
+{
+
+}
