@@ -19,8 +19,8 @@
 */
 
 
-#ifndef MATRIX_HPP
-#define MATRIX_HPP
+#ifndef MATRIX_CSTYLE_HPP
+#define MATRIX_CSTYLE_HPP
 
 #include <stdio.h>     // for printf
 #include <stdlib.h>    // for malloc / free
