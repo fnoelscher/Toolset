@@ -85,14 +85,10 @@ public:
   // not yet implemented
   Matrix& operator *(Matrix &other)
   {
-    unsigned int rsizex = other.getSizeX();
-    unsigned int rsizey = other.getSizeY();
-
-    if(this->sizex != rsizex ||
-       this->sizey != rsizey)
-      return this->dotProduct(other);
-    else
+    if(this->hasSameDimensions(other))
       return this->mult(other);
+    else
+      return this->dotProduct(other);
   }
 
 
