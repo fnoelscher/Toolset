@@ -1,6 +1,6 @@
 # Makefile for unit tests
 
-CC=gcc
+CC=g++
 OUTFILE="tests"
 
 CFLAGS= -Wall -o $(OUTFILE)
