@@ -50,6 +50,11 @@ int main(int argc, char **argv)
   // check square matrix detection
   assert(! mat.isSquareMatrix());
 
+  // check hasSameDimensions
+  Matrix<int> dimtest(2,2);
+  assert(! dimtest.hasSameDimensions(mat) );
+  assert( mat.hasSameDimensions(mat) );
+
   // check multiplication
   
   Matrix<int> first(16,16);
