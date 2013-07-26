@@ -1,23 +1,26 @@
 # Makefile for unit tests / c++
 
 CC=g++
-OUTFILE="tests"
+INCLUDES= -I ../../basics/ -I ../../algos/
+CFLAGS= -Wall $(INCLUDES) --std=c++0x
 
-CFLAGS= -Wall -o $(OUTFILE)
+all: cstyleMatrixTest fileops
 
-all:
-	$(CC) $(CFLAGS) *.cpp
-
+# change this
 debug:
 	$(CC) $(CFLAGS) -g *.cpp
 
 clean:
-	rm $(OUTFILE)
+	rm *.bin
 
 
+cstyleMatrixTest:
+	$(CC) $(CFLAGS) -o matrix_cstyle.bin matrix_cstyle.cpp
 
 
+matrixTest:
+	$(CC) $(CFLAGS) -o matrix.bin matrix.cpp
 
-
-
+fileops:
+	$(CC) $(CFLAGS) -o fileops.bin fileops.cpp
 

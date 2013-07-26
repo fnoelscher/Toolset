@@ -26,7 +26,7 @@ int main(int argc, char **argv)
   int sizex = 16;
   int sizey = 24;
 
-  Matrix<int> mat(sizex, sizey);
+  CMatrix<int> mat(sizex, sizey);
 
   for(int i = 0; i < sizey; i++)
     {
@@ -51,14 +51,14 @@ int main(int argc, char **argv)
   assert(! mat.isSquareMatrix());
 
   // check hasSameDimensions
-  Matrix<int> dimtest(2,2);
+  CMatrix<int> dimtest(2,2);
   assert(! dimtest.hasSameDimensions(mat) );
   assert( mat.hasSameDimensions(mat) );
 
   // check multiplication
   
-  Matrix<int> first(16,16);
-  Matrix<int> second(16,16);
+  CMatrix<int> first(16,16);
+  CMatrix<int> second(16,16);
 
   first[2][2] = 2;
   second[2][2] = 3;

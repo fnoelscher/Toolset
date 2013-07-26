@@ -27,11 +27,11 @@
 #include <string.h>    // for memset
 
 template <class T>
-class Matrix {
+class CMatrix {
 
 public:
   
-  Matrix(unsigned int cols,
+  CMatrix(unsigned int cols,
 	 unsigned int rows)
   {
     size_t tsize = sizeof(T);
@@ -64,7 +64,7 @@ public:
     this->sizex = cols;
   }
 
-  ~Matrix()
+  ~CMatrix()
   {
     // frees everything - valgrind checked
     free(this->array);
@@ -83,7 +83,7 @@ public:
 
   // provides matrix multiplication or dot-product, if sizes are not equal
   // not yet implemented
-  Matrix& operator *(Matrix &other)
+  CMatrix& operator *(CMatrix &other)
   {
     if(this->hasSameDimensions(other))
       return this->mult(other);
@@ -97,14 +97,14 @@ public:
      ---------
   */
 
-  Matrix& mult(Matrix &other)
+  CMatrix& mult(CMatrix &other)
   {
     // not yet implemented
     printf("Method 'mult' not yet implemented");
     return other; 
   }
 
-  Matrix& dotProduct(Matrix &other)
+  CMatrix& dotProduct(CMatrix &other)
   {
     // not yet implemented
     printf("Method 'dotProduct' not yet implemented");
@@ -112,7 +112,7 @@ public:
   }
 
   // in place-multiplicaton
-  void multInPlace(Matrix &other)
+  void multInPlace(CMatrix &other)
   {
     if(! hasSameDimensions(other))
       return;
@@ -126,7 +126,7 @@ public:
       }
   }
 
-  bool hasSameDimensions(Matrix &other)
+  bool hasSameDimensions(CMatrix &other)
   {  
     unsigned int rsizex = other.getSizeX();
     unsigned int rsizey = other.getSizeY();
