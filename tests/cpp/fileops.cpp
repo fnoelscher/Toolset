@@ -21,7 +21,7 @@
 
 int main(int argc, char **argv)
 {
-  std::vector<std::string> dirContents = listDirectoryFiles("testdir");
+  std::vector<std::string> dirContents = listDirectoryContents("testdir");
 
   for(std::string s : dirContents)
     {

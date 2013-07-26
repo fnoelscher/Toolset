@@ -27,7 +27,7 @@
 #include <dirent.h>
 
 std::vector<std::string>
-listDirectoryFiles(std::string path)
+listDirectoryContents(std::string path)
 {
   DIR *dir;
   struct dirent *ent;
